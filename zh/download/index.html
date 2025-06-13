@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Download Lingmo OS</title>
+<title>下载Lingmo OS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -11,39 +11,39 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:'#1E90FF',secondary:'#4169E1'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 <body class="bg-gray-50">
-<!-- Navigation Bar -->
+<!-- 导航栏 -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm shadow-sm">
 <div class="container mx-auto px-4 py-3 flex items-center justify-between">
 <a href="../" class="flex items-center">
 <!-- <span class="text-3xl font-['Pacifico'] text-primary">Lingmo OS</span> -->
- <img src="../images/logo.svg" alt="Lingmo OS" style="width: 240px; height: 50px;">
+ <img src="../../images/logo.svg" alt="Lingmo OS" style="width: 240px; height: 50px;">
 </a>
 <nav class="hidden md:flex space-x-8">
-<a href="../" class="nav-link text-gray-700 hover:text-primary font-medium">Home</a>
-<a href="#" class="nav-link text-gray-700 hover:text-primary font-medium">Download</a>
-<a href="https://wiki.lingmo.org/" class="nav-link text-gray-700 hover:text-primary font-medium">Documentation</a>
-<a href="https://bbs.lingmo.org" class="nav-link text-gray-700 hover:text-primary font-medium">Community</a>
-<a href="../donate/" class="nav-link text-gray-700 hover:text-primary font-medium">Donate</a>
-<!-- <a href="../lifecycle/" class="nav-link text-gray-700 hover:text-primary font-medium">Lifecycle</a> -->
-<a href="../about/" class="nav-link text-gray-700 hover:text-primary font-medium">About</a>
+<a href="../" class="nav-link text-gray-700 hover:text-primary font-medium">首页</a>
+<a href="#" class="nav-link text-gray-700 hover:text-primary font-medium">下载</a>
+<a href="https://wiki.lingmo.org/" class="nav-link text-gray-700 hover:text-primary font-medium">文档</a>
+<a href="https://bbs.lingmo.org" class="nav-link text-gray-700 hover:text-primary font-medium">社区</a>
+<a href="../donate/" class="nav-link text-gray-700 hover:text-primary font-medium">捐赠</a>
+<!-- <a href="../lifecycle/" class="nav-link text-gray-700 hover:text-primary font-medium">生命周期</a> -->
+<a href="../about/" class="nav-link text-gray-700 hover:text-primary font-medium">关于</a>
 </nav>
 <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
 <i class="ri-menu-line ri-lg"></i>
 </button>
 </div>
-<!-- Mobile Menu -->
+<!-- 移动端菜单 -->
 <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
 <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-<a href="../" class="text-gray-700 hover:text-primary font-medium py-2">Home</a>
-<a href="#" class="text-gray-700 hover:text-primary font-medium py-2">Download</a>
-<a href="https://wiki.lingmo.org/" class="text-gray-700 hover:text-primary font-medium py-2">Documentation</a>
-<a href="https://bbs.lingmo.org" class="text-gray-700 hover:text-primary font-medium py-2">Community</a>
-<a href="../donate/" class="text-gray-700 hover:text-primary font-medium py-2">Donate</a>
-<!-- <a href="../lifecycle/" class="text-gray-700 hover:text-primary font-medium py-2">Lifecycle</a> -->
-<a href="../about/" class="text-gray-700 hover:text-primary font-medium py-2">About</a>
+<a href="../" class="text-gray-700 hover:text-primary font-medium py-2">首页</a>
+<a href="#" class="text-gray-700 hover:text-primary font-medium py-2">下载</a>
+<a href="https://wiki.lingmo.org/" class="text-gray-700 hover:text-primary font-medium py-2">文档</a>
+<a href="https://bbs.lingmo.org" class="text-gray-700 hover:text-primary font-medium py-2">社区</a>
+<a href="../donate/" class="text-gray-700 hover:text-primary font-medium py-2">捐赠</a>
+<!-- <a href="../lifecycle/" class="text-gray-700 hover:text-primary font-medium py-2">生命周期</a> -->
+<a href="../about/" class="text-gray-700 hover:text-primary font-medium py-2">关于</a>
 </div>
 </div>
 </header>
@@ -51,94 +51,71 @@
 <div class="container mx-auto px-4">
 <div class="text-center mb-16">
 <br>
-<h2 class="text-4xl font-bold mb-4">Download Lingmo OS</h2>
-<p class="text-lg text-gray-600 max-w-3xl mx-auto">Choose the version that suits your needs and start experiencing a modern Linux system.</p>
+<h2 class="text-4xl font-bold mb-4">下载 Lingmo OS</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">选择适合您需求的版本，开始体验现代化的 Linux 系统</p>
 </div>
 <div class="max-w-4xl mx-auto">
-<!-- Version Selection Tabs -->
+<!-- 版本选择标签 -->
 <div class="flex justify-center mb-8">
 <div class="inline-flex bg-gray-200 p-1 rounded-full">
 <!-- <button class="version-tab active px-6 py-2 rounded-full whitespace-nowrap focus:outline-none" data-target="stable">
-Stable
+稳定版
 </button> -->
 <button class="version-tab px-6 py-2 rounded-full whitespace-nowrap focus:outline-none active bg-white text-primary shadow-sm" data-target="stable">
-Stable
+稳定版
 </button>
 <button class="version-tab px-6 py-2 rounded-full whitespace-nowrap focus:outline-none" data-target="beta">
-Beta
+预发布版
 </button>
-<button class="version-tab px-6 py-2 rounded-full whitespace-nowrap focus:outline-none" data-target="alpha">
-Alpha
+<!--<button class="version-tab px-6 py-2 rounded-full whitespace-nowrap focus:outline-none" data-target="alpha">
+测试版
 </button>
+-->
 </div>
 </div>
-<!-- Stable Version Content -->
+<!-- 稳定版内容 -->
 <div id="stable-content" class="tab-content active bg-white rounded-lg shadow-md p-8">
 <div class="flex items-center justify-between mb-6">
 <div>
-<h3 class="text-2xl font-bold">Lingmo OS 3.0 Stable</h3>
-<p class="text-gray-500">Release Date: 2025-06-13</p>
+<h3 class="text-2xl font-bold">Lingmo OS 3.0 正式版</h3>
+<p class="text-gray-500">发布日期: 2025-06-13</p>
 </div>
-<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Recommended</span>
+<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">推荐</span>
 </div>
 <div class="mb-6">
-<h4 class="font-semibold mb-2">Update Content:</h4>
+<h4 class="font-semibold mb-2">更新内容:</h4>
 <ul class="text-gray-600 space-y-2 pl-5">
-<li>Optimized system performance, improved boot speed</li>
-<li>Fixed known security vulnerabilities, enhanced system security</li>
-<li>Improved user interface, added more customization options</li>
-<li>Updated built-in applications for better user experience</li>
-<li>Upgraded kernel to version 6.12 for improved stability</li>
+<li>新增了桌面图标排序功能</li>
+<li>新增了选择所有现有程序打开文件的功能</li>
+<li>在顶部状态栏新增全局搜索图标</li>
+<li>在顶部状态栏新增显示桌面图标</li>
+<li>应用启动器支持显示 Flatpak 程序</li>
+<li>Dock支持显示 Flatpak 程序</li>
+<li>修复了桌面图标无法通过右键菜单调整大小的问题</li>
+<li>优化了快捷键设置页面的显示效果</li>
+<li>...</li>
 </ul>
 </div>
 <div class="flex flex-wrap gap-4">
 <a href="#" class="gradient-bg text-white px-6 py-3 rounded-button font-semibold shadow-md hover:shadow-lg transition-all whitespace-nowrap">
-<i class="ri-download-line mr-2"></i>64-bit version (2.6 GB)
+<i class="ri-download-line mr-2"></i>64位版本 (2.62 GB)
 </a>
 <!-- <a href="#" class="gradient-bg text-white px-6 py-3 rounded-button font-semibold shadow-md hover:shadow-lg transition-all whitespace-nowrap">
-<i class="ri-download-line mr-2"></i>32-bit version (4.8 GB)
+<i class="ri-download-line mr-2"></i>32位版本 (4.8 GB)
 </a> -->
-<a href="https://update.lingmo.org/logs/en/" class="text-primary hover:text-secondary font-medium whitespace-nowrap flex items-center">
-<i class="ri-file-list-line mr-1"></i>View full changelog
+<a href="https://update.lingmo.org/logs/zh/" class="text-primary hover:text-secondary font-medium whitespace-nowrap flex items-center">
+<i class="ri-file-list-line mr-1"></i>查看完整更新日志
 </a>
 </div>
 </div>
-<!-- Beta Version Content -->
+<!-- 预发布版内容 -->
 <div id="beta-content" class="tab-content bg-white rounded-lg shadow-md p-8">
 <div class="flex items-center justify-between mb-6">
 <div>
 <h3 class="text-2xl font-bold">Lingmo OS 3.0(rc10)</h3>
-<p class="text-gray-500">Release Date: 2025-06-06</p>
+<p class="text-gray-500">发布日期: 2025-05-10</p>
 </div>
-<span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Beta</span>
-</div>
-<div class="mb-6">
-<h4 class="font-semibold mb-2">Update Content:</h4>
-<ul class="text-gray-600 space-y-2 pl-5">
-<li>Optimized system performance, improved boot speed</li>
-<li>Fixed known security vulnerabilities, enhanced system security</li>
-</ul>
-</div>
-<div class="flex flex-wrap gap-4">
-<a href="#" class="bg-yellow-500 text-white px-6 py-3 rounded-button font-semibold shadow-md hover:shadow-lg transition-all whitespace-nowrap">
-<i class="ri-download-line mr-2"></i>64-bit version (2.6 GB)
-</a>
-<!-- <a href="#" class="bg-yellow-500 text-white px-6 py-3 rounded-button font-semibold shadow-md hover:shadow-lg transition-all whitespace-nowrap">
-<i class="ri-download-line mr-2"></i>32-bit version (5.0 GB)
-</a> -->
-<a href="#" class="text-primary hover:text-secondary font-medium whitespace-nowrap flex items-center">
-<i class="ri-file-list-line mr-1"></i>View full changelog
-</a>
-</div>
-</div>
-<!-- Alpha Version Content -->
-<div id="alpha-content" class="tab-content bg-white rounded-lg shadow-md p-8">
-<div class="flex items-center justify-between mb-6">
-<div>
-<h3 class="text-2xl font-bold">Lingmo OS Alpha</h3>
-<p class="text-gray-500">Release Date: 2025-06-06</p>
-</div>
-<span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Alpha</span>
+<span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">预发布</span>
 </div>
 <div class="mb-6">
 <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
@@ -148,41 +125,84 @@ Alpha
 </div>
 <div class="ml-3">
 <p class="text-sm text-red-700">
-Warning: This version is for testing purposes only and may contain serious bugs. It is not recommended for use in production environments.
+警告：此版本仅供测试使用，可能存在严重bug，不建议在生产环境中使用。
 </p>
 </div>
 </div>
 </div>
-<h4 class="font-semibold mb-2">Update Content:</h4>
+<h4 class="font-semibold mb-2">更新内容:</h4>
 <ul class="text-gray-600 space-y-2 pl-5">
-<li>Optimized system performance, improved boot speed</li>
-<li>Fixed known security vulnerabilities, enhanced system security</li>
+<li>新增工作区（Workspace）功能</li>
+<li>修复桌面右键菜单中文翻译不全问题</li>
+<li>优化系统部分图标显示</li>
+<li>...</li>
+</ul>
+</div>
+<div class="flex flex-wrap gap-4">
+<a href="#" class="bg-yellow-500 text-white px-6 py-3 rounded-button font-semibold shadow-md hover:shadow-lg transition-all whitespace-nowrap">
+<i class="ri-download-line mr-2"></i>64位版本 (2.5 GB)
+</a>
+<!-- <a href="#" class="bg-yellow-500 text-white px-6 py-3 rounded-button font-semibold shadow-md hover:shadow-lg transition-all whitespace-nowrap">
+<i class="ri-download-line mr-2"></i>32位版本 (5.0 GB)
+</a> -->
+<a href="#" class="text-primary hover:text-secondary font-medium whitespace-nowrap flex items-center">
+<i class="ri-file-list-line mr-1"></i>查看完整更新日志
+</a>
+</div>
+</div>
+<!-- 测试版内容 -->
+<!-- <div id="alpha-content" class="tab-content bg-white rounded-lg shadow-md p-8">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h3 class="text-2xl font-bold">Lingmo OS Alpha</h3>
+<p class="text-gray-500">发布日期: 2025-06-06</p>
+</div>
+<span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Alpha版</span>
+</div>
+<div class="mb-6">
+<div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+<div class="flex">
+<div class="flex-shrink-0">
+<i class="ri-error-warning-line ri-lg text-red-500"></i>
+</div>
+<div class="ml-3">
+<p class="text-sm text-red-700">
+警告：此版本仅供测试使用，可能存在严重bug，不建议在生产环境中使用。
+</p>
+</div>
+</div>
+</div>
+<h4 class="font-semibold mb-2">更新内容:</h4>
+<ul class="text-gray-600 space-y-2 pl-5">
+<li>优化系统性能，提升启动速度</li>
+<li>修复已知安全漏洞，增强系统安全性</li>
 </ul>
 </div>
 <div class="flex flex-wrap gap-4">
 <a href="#" class="bg-red-500 text-white px-6 py-3 rounded-button font-semibold shadow-md hover:shadow-lg transition-all whitespace-nowrap">
-<i class="ri-download-line mr-2"></i>64-bit version (5.8 GB)
+<i class="ri-download-line mr-2"></i>64位版本 (5.8 GB)
 </a>
 <a href="#" class="text-primary hover:text-secondary font-medium whitespace-nowrap flex items-center">
-<i class="ri-file-list-line mr-1"></i>View full changelog
+<i class="ri-file-list-line mr-1"></i>查看完整更新日志
 </a>
 </div>
 </div>
 </div>
+-->
 <div class="mt-12 text-center">
-<h3 class="text-xl font-semibold mb-4">Previous Versions</h3>
+<h3 class="text-xl font-semibold mb-4">历史版本</h3>
 <div class="inline-block">
-<a href="#" class="text-primary hover:text-secondary font-medium">View all previous versions <i class="ri-arrow-right-line"></i></a>
+<a href="https://packages.lingmo.org/lingmo/release/daily/" class="text-primary hover:text-secondary font-medium">查看所有历史版本 <i class="ri-arrow-right-line"></i></a>
 </div>
 </div>
 </div>
 </section>
-<!-- System Requirements -->
+<!-- 系统要求 -->
 <section id="requirements" class="py-20 bg-white">
 <div class="container mx-auto px-4">
 <div class="text-center mb-16">
-<h2 class="text-4xl font-bold mb-4">System Requirements</h2>
-<p class="text-lg text-gray-600 max-w-3xl mx-auto">Ensure your device meets the following requirements for the best experience.</p>
+<h2 class="text-4xl font-bold mb-4">系统要求</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">确保您的设备满足以下要求，以获得最佳体验</p>
 </div>
 <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -190,20 +210,20 @@ Warning: This version is for testing purposes only and may contain serious bugs.
 <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
 <i class="ri-cpu-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold">Processor</h3>
+<h3 class="text-xl font-semibold">处理器</h3>
 </div>
 <ul class="text-gray-600 space-y-3">
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Minimum Requirement: Intel/AMD Dual-core Processor</span>
+<span>最低要求: Intel/AMD 双核处理器</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Recommended Configuration: Intel Core i3/AMD Ryzen 3 or higher</span>
+<span>推荐配置: Intel Core i3/AMD Ryzen 3 或更高</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Only supports x86_64 architecture</span>
+<span>支持 x86_64 架构</span>
 </li>
 </ul>
 </div>
@@ -212,20 +232,20 @@ Warning: This version is for testing purposes only and may contain serious bugs.
 <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
 <i class="ri-database-2-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold">Memory</h3>
+<h3 class="text-xl font-semibold">内存</h3>
 </div>
 <ul class="text-gray-600 space-y-3">
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Minimum Requirement: 2 GB RAM</span>
+<span>最低要求: 2 GB RAM</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Recommended Configuration: 4 GB RAM or higher</span>
+<span>推荐配置: 4 GB RAM 或更高</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>It is recommended to enable SWAP partition</span>
+<span>建议开启 SWAP 分区</span>
 </li>
 </ul>
 </div>
@@ -234,20 +254,20 @@ Warning: This version is for testing purposes only and may contain serious bugs.
 <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
 <i class="ri-hard-drive-2-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold">Storage Space</h3>
+<h3 class="text-xl font-semibold">存储空间</h3>
 </div>
 <ul class="text-gray-600 space-y-3">
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Minimum Requirement: 10 GB available space</span>
+<span>最低要求: 10 GB 可用空间</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Recommended Configuration: 30 GB or more available space</span>
+<span>推荐配置: 30 GB 或更多可用空间</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Supports ext4, btrfs file systems</span>
+<span>支持 ext4, btrfs 文件系统</span>
 </li>
 </ul>
 </div>
@@ -256,20 +276,20 @@ Warning: This version is for testing purposes only and may contain serious bugs.
 <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
 <i class="ri-gamepad-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold">Graphics Card</h3>
+<h3 class="text-xl font-semibold">显卡</h3>
 </div>
 <ul class="text-gray-600 space-y-3">
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Supports Intel HD Graphics 4000 and above</span>
+<span>支持 Intel HD Graphics 4000 及以上</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Supports NVIDIA graphics cards (open-source drivers recommended)</span>
+<span>支持 NVIDIA 显卡（推荐使用开源驱动）</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Supports AMD Radeon graphics cards</span>
+<span>支持 AMD Radeon 显卡</span>
 </li>
 </ul>
 </div>
@@ -278,20 +298,20 @@ Warning: This version is for testing purposes only and may contain serious bugs.
 <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
 <i class="ri-wifi-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold">Network</h3>
+<h3 class="text-xl font-semibold">网络</h3>
 </div>
 <ul class="text-gray-600 space-y-3">
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Internet connection required for installation and updates</span>
+<span>安装和更新需要互联网连接</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Recommended broadband connection (10 Mbps or higher)</span>
+<span>推荐宽带连接 (10 Mbps 或更高)</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Supports Wi-Fi and wired network connections</span>
+<span>支持 Wi-Fi 和有线网络连接</span>
 </li>
 </ul>
 </div>
@@ -300,20 +320,20 @@ Warning: This version is for testing purposes only and may contain serious bugs.
 <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
 <i class="ri-device-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold">Other Requirements</h3>
+<h3 class="text-xl font-semibold">其他要求</h3>
 </div>
 <ul class="text-gray-600 space-y-3">
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>UEFI firmware support (recommended)</span>
+<span>UEFI 固件支持 (推荐)</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>TPM 2.0 security chip (optional)</span>
+<span>TPM 2.0 安全芯片 (可选)</span>
 </li>
 <!-- <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>USB 3.0 interface (for installation)</span>
+<span>USB 3.0 接口 (用于安装)</span>
 </li> -->
 </ul>
 </div>
@@ -321,18 +341,18 @@ Warning: This version is for testing purposes only and may contain serious bugs.
 <div class="mt-12 max-w-4xl mx-auto bg-blue-50 p-6 rounded-lg">
 <h3 class="text-xl font-semibold mb-4 flex items-center">
 <i class="ri-information-line ri-lg text-primary mr-2"></i>
-Ensure Your Device Meets the Above Requirements
+确保您的设备符合以上需求
 </h3>
 <p class="text-gray-700 mb-4">
-If your device does not meet the above requirements, you can download the lightweight version of Lingmo OS.
+如果您的设备不满足以上需求，您可以下载轻量版Lingmo OS
 </p>
 <a href="#" class="inline-block text-white bg-primary px-6 py-3 rounded-button font-semibold shadow-md hover:shadow-lg transition-all whitespace-nowrap">
-<i class="ri-download-line mr-2"></i>Download Lightweight Version
+<i class="ri-download-line mr-2"></i>下载轻量版
 </a>
 </div>
 </div>
 </section>
-<!-- Footer -->
+<!-- 页脚 -->
 <footer class="bg-gray-800 text-white py-12">
 <div class="container mx-auto px-4">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
@@ -340,9 +360,9 @@ If your device does not meet the above requirements, you can download the lightw
 <!-- <h3 class="text-xl font-['Pacifico'] mb-4">Lingmo OS</h3> -->
 <a href="#" class="flex items-center">
 <!-- <span class="text-3xl font-['Pacifico'] text-primary">Lingmo OS</span> -->
- <img src="../images/logo.svg" alt="Lingmo OS" style="width: 190px; height: 50px;">
+ <img src="../../images/logo.svg" alt="Lingmo OS" style="width: 190px; height: 50px;">
 </a>
-<p class="text-gray-400 mb-4">A modern operating system based on Debian GNU/Linux.</p>
+<p class="text-gray-400 mb-4">基于 Debian GNU/Linux 的现代化操作系统。</p>
 <div class="flex space-x-4">
 <a href="https://github.com/LingmoOS" class="text-gray-400 hover:text-white transition-colors">
 <i class="ri-github-fill ri-lg"></i>
@@ -362,52 +382,53 @@ If your device does not meet the above requirements, you can download the lightw
 </div>
 </div>
 <div>
-<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<h4 class="text-lg font-semibold mb-4">快速链接</h4>
 <ul class="space-y-2">
-<li><a href="../home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-<li><a href="#download" class="text-gray-400 hover:text-white transition-colors">Download</a></li>
-<li><a href="#requirements" class="text-gray-400 hover:text-white transition-colors">System Requirements</a></li>
-<!-- <li><a href="../lifecycle/" class="text-gray-400 hover:text-white transition-colors">Lifecycle</a></li> -->
-<li><a href="../donate/" class="text-gray-400 hover:text-white transition-colors">Donate</a></li>
-<li><a href="../about/" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+<li><a href="../home" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+<li><a href="#download" class="text-gray-400 hover:text-white transition-colors">下载</a></li>
+<li><a href="#requirements" class="text-gray-400 hover:text-white transition-colors">系统要求</a></li>
+<!-- <li><a href="../lifecycle/" class="text-gray-400 hover:text-white transition-colors">生命周期</a></li> -->
+<li><a href="../donate/" class="text-gray-400 hover:text-white transition-colors">捐赠</a></li>
+<li><a href="../about/" class="text-gray-400 hover:text-white transition-colors">关于</a></li>
 </ul>
 </div>
 <div>
-<h4 class="text-lg font-semibold mb-4">Resources</h4>
+<h4 class="text-lg font-semibold mb-4">资源</h4>
 <ul class="space-y-2">
-<li><a href="https://wiki.lingmo.org/" class="text-gray-400 hover:text-white transition-colors">Wiki/Documentation</a></li>
-<li><a href="https://github.com/LingmoOS" class="text-gray-400 hover:text-white transition-colors">Source Code</a></li>
-<!-- <li><a href="#" class="text-gray-400 hover:text-white transition-colors">App Store</a></li> -->
-<li><a href="https://wiki.lingmo.org/zh/wiki/faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+<li><a href="https://wiki.lingmo.org/" class="text-gray-400 hover:text-white transition-colors">维基百科/文档</a></li>
+<li><a href="https://github.com/LingmoOS" class="text-gray-400 hover:text-white transition-colors">源代码</a></li>
+<!-- <li><a href="#" class="text-gray-400 hover:text-white transition-colors">应用商店</a></li> -->
+<li><a href="https://wiki.lingmo.org/zh/wiki/faq" class="text-gray-400 hover:text-white transition-colors">FQA</a></li>
 <li><a href="https://space.bilibili.com/595380133" class="text-gray-400 hover:text-white transition-colors">bilibili</a></li>
 </ul>
 </div>
 <div>
-<h4 class="text-lg font-semibold mb-4">Related Links</h4>
+<h4 class="text-lg font-semibold mb-4">相关链接</h4>
 <ul class="space-y-2">
 <li><a href="https://debian.org/" class="text-gray-400 hover:text-white transition-colors">Debian GNU/Linux</a></li>
 <li><a href="https://kernel.org" class="text-gray-400 hover:text-white transition-colors">Linux</a></li>
 </ul>
 </div>
 <!-- <div>
-<h4 class="text-lg font-semibold mb-4">Subscribe to Updates</h4>
-<p class="text-gray-400 mb-4">Subscribe to our newsletter to get the latest version and feature updates.</p>
+<h4 class="text-lg font-semibold mb-4">订阅更新</h4>
+<p class="text-gray-400 mb-4">订阅我们的新闻通讯，获取最新版本和功能更新。</p>
 <form class="flex">
-<input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-l-button text-gray-800 focus:outline-none border-none text-sm">
+<input type="email" placeholder="您的邮箱地址" class="w-full px-4 py-2 rounded-l-button text-gray-800 focus:outline-none border-none text-sm">
 <button type="submit" class="gradient-bg px-4 py-2 rounded-r-button whitespace-nowrap">
-Subscribe
+订阅
 </button>
 </form>
 </div> -->
 </div>
 <div class="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
 <div class="text-gray-400 text-sm mb-4 md:mb-0">
-&copy; 2023-2025 Lingmo OS Team. All rights reserved.<br>
-<a href="https://beian.miit.gov.cn/" target="*blank" rel="noreferrer" style="color:#949494;text-decoration:none">Gansu ICP Record No. 2024012028</div>
+&copy; 2023-2025 Lingmo OS Team。保留所有权利。<br>
+<a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer" style="color:#949494;text-decoration:none">陇ICP备2024012028号</a>
+</div>
 <div class="flex space-x-6">
-<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
-<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
-<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">License Agreement</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">隐私政策</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">服务条款</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">许可协议</a>
 </div>
 </div>
 </div>
@@ -419,7 +440,7 @@ const mobileMenu = document.getElementById('mobile-menu');
 mobileMenuButton.addEventListener('click', function() {
 mobileMenu.classList.toggle('hidden');
 });
-// Close menu after clicking on an item
+// 点击菜单项后关闭菜单
 const mobileMenuItems = mobileMenu.querySelectorAll('a');
 mobileMenuItems.forEach(item => {
 item.addEventListener('click', function() {
@@ -433,14 +454,14 @@ document.addEventListener('DOMContentLoaded', function() {
 const versionTabs = document.querySelectorAll('.version-tab');
 versionTabs.forEach(tab => {
 tab.addEventListener('click', function() {
-// Remove active state from all tabs
+// 移除所有标签的活动状态
 versionTabs.forEach(t => t.classList.remove('active', 'bg-white', 'text-primary', 'shadow-sm'));
-// Add active state to the clicked tab
+// 添加当前标签的活动状态
 this.classList.add('active', 'bg-white', 'text-primary', 'shadow-sm');
-// Hide all content
+// 隐藏所有内容
 const tabContents = document.querySelectorAll('.tab-content');
 tabContents.forEach(content => content.classList.remove('active'));
-// Show the content corresponding to the clicked tab
+// 显示当前标签对应的内容
 const targetId = this.getAttribute('data-target') + '-content';
 document.getElementById(targetId).classList.add('active');
 });
@@ -452,14 +473,14 @@ document.addEventListener('DOMContentLoaded', function() {
 const paymentTabs = document.querySelectorAll('.payment-tab');
 paymentTabs.forEach(tab => {
 tab.addEventListener('click', function() {
-// Remove active state from all tabs
+// 移除所有标签的活动状态
 paymentTabs.forEach(t => t.classList.remove('active', 'bg-white', 'text-primary', 'shadow-sm'));
-// Add active state to the clicked tab
+// 添加当前标签的活动状态
 this.classList.add('active', 'bg-white', 'text-primary', 'shadow-sm');
-// Hide all content
+// 隐藏所有内容
 const paymentOptions = document.querySelectorAll('.payment-option');
 paymentOptions.forEach(option => option.classList.remove('active'));
-// Show the content corresponding to the clicked tab
+// 显示当前标签对应的内容
 const targetId = this.getAttribute('data-target') + '-option';
 document.getElementById(targetId).classList.add('active');
 });
@@ -473,9 +494,9 @@ faqToggles.forEach(toggle => {
 toggle.addEventListener('click', function() {
 const content = this.nextElementSibling;
 const icon = this.querySelector('i');
-// Toggle content display state
+// 切换内容显示状态
 content.classList.toggle('hidden');
-// Rotate the icon
+// 切换图标旋转状态
 if (content.classList.contains('hidden')) {
 icon.style.transform = 'rotate(0deg)';
 } else {
@@ -487,7 +508,7 @@ icon.style.transform = 'rotate(180deg)';
 </script>
 <script id="smooth-scroll-script">
 document.addEventListener('DOMContentLoaded', function() {
-// Smooth scrolling
+// 平滑滚动
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 anchor.addEventListener('click', function(e) {
 e.preventDefault();
@@ -496,13 +517,13 @@ if (targetId === '#') return;
 const targetElement = document.querySelector(targetId);
 if (targetElement) {
 window.scrollTo({
-top: targetElement.offsetTop - 80, // Adjust for fixed navbar height
+top: targetElement.offsetTop - 80, // 考虑固定导航栏的高度
 behavior: 'smooth'
 });
 }
 });
 });
-// Highlight navigation
+// 导航高亮
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 window.addEventListener('scroll', function() {
@@ -519,6 +540,7 @@ link.classList.remove('active');
 if (link.getAttribute('href') === `#${current}`) {
 link.classList.add('active');
 }
+});
 });
 });
 </script>

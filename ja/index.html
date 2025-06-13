@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lingmo OS - elegant and efficient modern Linux distribution</title>
+<title>Lingmo OS - エレガントで効率的なモダンなLinuxディストリビューション</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -12,138 +12,123 @@
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:'#1E90FF',secondary:'#4169E1'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <script>
-  // Get browser language
+  // ブラウザの言語を取得
   const browserLang = navigator.language || navigator.userLanguage;
-  let lang = 'en'; // Default language
-  if (browserLang.startsWith('zh')) {
+  let lang = 'ja'; // デフォルト言語
+  if (browserLang.startsWith('en')) {
+    lang = '';
+  } else if (browserLang.startsWith('zh')) {
     lang = 'zh';
-//  } else if (browserLang.startsWith('ja')) {
-//   lang = 'ja';
-// } else if (browserLang.startsWith('ko')) {
-//    lang = 'ko';
-//  } else if (browserLang.startsWith('ru')) {
-//    lang = 'ru';
   }
 
-  // Redirect to the corresponding language version page
-  if (lang !== 'en') {
-    window.location.href = `${lang}/`;
+  // 対応する言語バージョンのページにリダイレクト
+  if (lang !== 'ja') {
+    window.location.href = `../${lang}`;
   }
 </script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50">
-<!-- Navigation Bar -->
+<!-- ナビゲーションバー -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm shadow-sm">
 <div class="container mx-auto px-4 py-3 flex items-center justify-between">
 <a href="#" class="flex items-center">
-<!-- <span class="text-3xl font-['Pacifico'] text-primary">Lingmo OS</span> -->
- <img src="images/logo.svg" alt="Lingmo OS" style="width: 240px; height: 50px;">
+<img src="images/logo.svg" alt="Lingmo OS" style="width: 240px; height: 50px;">
 </a>
 <nav class="hidden md:flex space-x-8">
-<a href="/" class="nav-link text-gray-700 hover:text-primary font-medium">Home</a>
-<a href="download/" class="nav-link text-gray-700 hover:text-primary font-medium">Download</a>
-<a href="https://wiki.lingmo.org/" class="nav-link text-gray-700 hover:text-primary font-medium">Document</a>
-<a href="https://bbs.lingmo.org" class="nav-link text-gray-700 hover:text-primary font-medium">Community</a>
-<a href="donate/" class="nav-link text-gray-700 hover:text-primary font-medium">Donate</a>
-<!-- <a href="lifecycle/" class="nav-link text-gray-700 hover:text-primary font-medium">Lifecycle</a> -->
-<a href="about/" class="nav-link text-gray-700 hover:text-primary font-medium">About</a>
+<a href="/" class="nav-link text-gray-700 hover:text-primary font-medium">ホーム</a>
+<a href="download/" class="nav-link text-gray-700 hover:text-primary font-medium">ダウンロード</a>
+<a href="https://wiki.lingmo.org/" class="nav-link text-gray-700 hover:text-primary font-medium">ドキュメント</a>
+<a href="https://bbs.lingmo.org" class="nav-link text-gray-700 hover:text-primary font-medium">コミュニティ</a>
+<a href="donate/" class="nav-link text-gray-700 hover:text-primary font-medium">寄付</a>
+<a href="about/" class="nav-link text-gray-700 hover:text-primary font-medium">关于我们</a>
 </nav>
 <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
 <i class="ri-menu-line ri-lg"></i>
 </button>
 </div>
-<!-- Mobile Menu -->
+<!-- モバイルメニュー -->
 <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
 <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-<a href="/" class="text-gray-700 hover:text-primary font-medium py-2">Home</a>
-<a href="download/" class="text-gray-700 hover:text-primary font-medium py-2">Download</a>
-<a href="https://wiki.lingmo.org/" class="text-gray-700 hover:text-primary font-medium py-2">Document</a>
-<a href="https://bbs.lingmo.org" class="text-gray-700 hover:text-primary font-medium py-2">Community</a>
-<a href="donate/" class="text-gray-700 hover:text-primary font-medium py-2">Donate</a>
-<!-- <a href="lifecycle/" class="text-gray-700 hover:text-primary font-medium py-2">Lifecycle</a> -->
-<a href="about/" class="text-gray-700 hover:text-primary font-medium py-2">About</a>
+<a href="/" class="text-gray-700 hover:text-primary font-medium py-2">ホーム</a>
+<a href="download/" class="text-gray-700 hover:text-primary font-medium py-2">ダウンロード</a>
+<a href="https://wiki.lingmo.org/" class="text-gray-700 hover:text-primary font-medium py-2">ドキュメント</a>
+<a href="https://bbs.lingmo.org" class="text-gray-700 hover:text-primary font-medium py-2">コミュニティ</a>
+<a href="donate/" class="text-gray-700 hover:text-primary font-medium py-2">寄付</a>
+<a href="about/" class="text-gray-700 hover:text-primary font-medium py-2">关于我们</a>
 </div>
 </div>
 </header>
-<!-- Hero Section -->
+<!-- ヒーローセクション -->
 <section id="home" class="hero-section min-h-screen pt-20 flex items-center">
 <div class="container mx-auto px-4 py-20">
 <div class="w-full md:w-1/2 text-white">
 <h1 class="text-5xl md:text-6xl font-bold mb-6">Lingmo OS</h1>
-<p class="text-xl md:text-2xl mb-8">A modern Linux distribution based on Debian GNU/Linux</p>
-<p class="text-lg mb-10 max-w-xl">Based on the rock-solid Debian GNU/Linux, Lingmo OS provides an elegant user interface, stable system performance, and a rich software ecosystem, making your Linux experience simpler and smoother.</p>
+<p class="text-xl md:text-2xl mb-8">Debian GNU/Linuxに基づくモダンなLinuxディストリビューション</p>
+<p class="text-lg mb-10 max-w-xl">Lingmo OSは、安定したDebian GNU/Linuxに基づいており、エレガントなユーザーインターフェイス、安定したシステムパフォーマンス、豊富なソフトウェアエコシステムを提供し、あなたのLinux体験をよりシンプルでスムーズにします。</p>
 <div class="flex flex-wrap gap-4">
 <a href="download/" class="gradient-bg text-white px-8 py-3 rounded-button font-semibold shadow-lg hover:shadow-xl transition-all whitespace-nowrap">
-<i class="ri-download-line mr-2"></i>Download Now
+<i class="ri-download-line mr-2"></i>今すぐダウンロード
 </a>
 <a href="https://wiki.lingmo.org/en/wiki/installation-guide" class="bg-white bg-opacity-20 backdrop-blur-sm text-white border border-white border-opacity-40 px-8 py-3 rounded-button font-semibold hover:bg-opacity-30 transition-all whitespace-nowrap">
-<i class="ri-book-open-line mr-2"></i>Installation Guide
+<i class="ri-book-open-line mr-2"></i>インストールガイド
 </a>
 </div>
 </div>
 </div>
 </section>
-<!-- System Features -->
+<!-- システム機能 -->
 <section id="features" class="py-20 bg-white">
 <div class="container mx-auto px-4">
 <div class="text-center mb-16">
-<h2 class="text-4xl font-bold mb-4">System Features</h2>
-<p class="text-lg text-gray-600 max-w-3xl mx-auto">Lingmo OS has redesigned the entire system, optimized the visual effects, and improved the user experience.</p>
+<h2 class="text-4xl font-bold mb-4">システム機能</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Lingmo OSはシステム全体を再設計し、視覚効果を最適化し、ユーザー体験を向上させました。</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
 <div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-4">
 <i class="ri-speed-up-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold mb-3">Security and Stability</h3>
-<p class="text-gray-600">Lingmo OS is based on the extremely stable Debian GNU/Linux, which is not only beautiful but also very reliable.</p>
+<h3 class="text-xl font-semibold mb-3">セキュリティと安定性</h3>
+<p class="text-gray-600">Lingmo OSは、非常に安定したDebian GNU/Linuxに基づいており、美しく信頼性の高いシステムです。</p>
 </div>
 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
 <div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-4">
 <i class="ri-palette-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold mb-3">Beautiful Interface</h3>
-<p class="text-gray-600">Adopting LingmoDE, it provides a user experience similar to macOS, with a clean and beautiful interface and smooth operation.</p>
+<h3 class="text-xl font-semibold mb-3">美しいインターフェイス</h3>
+<p class="text-gray-600">LingmoDEを採用しており、macOSに似たユーザー体験を提供し、クリーンで美しいインターフェイスとスムーズな操作性を実現しています。</p>
 </div>
 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
 <div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-4">
 <i class="ri-tools-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold mb-3">User-friendly Tools</h3>
-<p class="text-gray-600">Built-in system settings and software store make system management and software installation simple and intuitive.</p>
+<h3 class="text-xl font-semibold mb-3">ユーザー友善のツール</h3>
+<p class="text-gray-600">ビルトインのシステム設定とソフトウェアストアにより、システム管理とソフトウェアインストールが簡単で直感的になります。</p>
 </div>
 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
 <div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-4">
 <i class="ri-translate-2-line ri-xl text-primary"></i>
 </div>
-<!--<h3 class="text-xl font-semibold mb-3">Localization Support</h3>
-<p class="text-gray-600">Comprehensive Chinese support, including input methods, font rendering optimization, etc., provides a friendly user experience for Chinese users.</p>
-</div>
--->
-<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-<div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-4">
-<i class="ri-apps-line ri-xl text-primary"></i>
-</div>
-<h3 class="text-xl font-semibold mb-3">Rich Software Ecosystem</h3>
-<p class="text-gray-600">Supports Debian software sources, providing access to a vast array of Linux applications to meet the software needs of all types of users.</p>
+<h3 class="text-xl font-semibold mb-3">豊富なソフトウェアエコシステム</h3>
+<p class="text-gray-600">Debianソフトウェアソースをサポートし、あらゆる種類のユーザーのソフトウェアニーズを満たす広大なLinuxアプリケーションにアクセスできます。</p>
 </div>
 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
 <div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-4">
 <i class="ri-community-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold mb-3">New Global Menu Design</h3>
-<p class="text-gray-600">Lingmo OS adopts a top global menu design, saving screen space while providing numerous functions.</p>
+<h3 class="text-xl font-semibold mb-3">新しいグローバルメニューデザイン</h3>
+<p class="text-gray-600">Lingmo OSは、画面スペースを節約しながら多くの機能を提供するトップグローバルメニューデザインを採用しています。</p>
 </div>
 </div>
 </div>
 </section>
-<!-- System Requirements -->
+<!-- システム要件 -->
 <section id="requirements" class="py-20 bg-white">
 <div class="container mx-auto px-4">
 <div class="text-center mb-16">
-<h2 class="text-4xl font-bold mb-4">System Requirements</h2>
-<p class="text-lg text-gray-600 max-w-3xl mx-auto">Ensure your device meets the following requirements for the best experience</p>
+<h2 class="text-4xl font-bold mb-4">システム要件</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">最高の体験を得るためには、デバイスが以下の要件を満たしていることを確認してください</p>
 </div>
 <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -151,20 +136,20 @@
 <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
 <i class="ri-cpu-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold">Processor</h3>
+<h3 class="text-xl font-semibold">プロセッサ</h3>
 </div>
 <ul class="text-gray-600 space-y-3">
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Minimum Requirement: Dual-core processor from Intel/AMD</span>
+<span>最低要求：Intel/AMDのデュアルコアプロセッサ</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Recommended Configuration: Intel Core i3/AMD Ryzen 3 or higher</span>
+<span>推奨構成：Intel Core i3/AMD Ryzen 3以上</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Only supports x86_64 architecture</span>
+<span>x86_64アーキテクチャのみをサポート</span>
 </li>
 </ul>
 </div>
@@ -173,20 +158,20 @@
 <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
 <i class="ri-database-2-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold">Memory</h3>
+<h3 class="text-xl font-semibold">メモリ</h3>
 </div>
 <ul class="text-gray-600 space-y-3">
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Minimum Requirement: 2 GB RAM</span>
+<span>最低要求：2 GB RAM</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Recommended Configuration: 4 GB RAM or higher</span>
+<span>推奨構成：4 GB RAM以上</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>It is recommended to enable a SWAP partition</span>
+<span>SWAPパーティションを有効化することをお勧めします</span>
 </li>
 </ul>
 </div>
@@ -195,20 +180,20 @@
 <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
 <i class="ri-hard-drive-2-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold">Storage Space</h3>
+<h3 class="text-xl font-semibold">ストレージ容量</h3>
 </div>
 <ul class="text-gray-600 space-y-3">
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Minimum Requirement: 10 GB available space</span>
+<span>最低要求：10 GBの空き容量</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Recommended Configuration: 30 GB or more available space</span>
+<span>推奨構成：30 GB以上の空き容量</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Supports ext4, btrfs file systems</span>
+<span>ext4、btrfsファイルシステムをサポート</span>
 </li>
 </ul>
 </div>
@@ -217,20 +202,20 @@
 <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
 <i class="ri-gamepad-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold">Graphics Card</h3>
+<h3 class="text-xl font-semibold">グラフィックカード</h3>
 </div>
 <ul class="text-gray-600 space-y-3">
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Supports Intel HD Graphics 4000 and above</span>
+<span>Intel HD Graphics 4000以上をサポート</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Supports NVIDIA graphics cards (open-source drivers recommended)</span>
+<span>NVIDIAグラフィックカードをサポート（オープンソースドライバーをお勧め）</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Supports AMD Radeon graphics cards</span>
+<span>AMD Radeonグラフィックカードをサポート</span>
 </li>
 </ul>
 </div>
@@ -239,20 +224,20 @@
 <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
 <i class="ri-wifi-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold">Network</h3>
+<h3 class="text-xl font-semibold">ネットワーク</h3>
 </div>
 <ul class="text-gray-600 space-y-3">
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Internet connection required for installation and updates</span>
+<span>インストールと更新にはインターネット接続が必要です</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Recommended broadband connection (10 Mbps or higher)</span>
+<span>10 Mbps以上のブロードバンド接続をお勧めします</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>Supports Wi-Fi and wired network connections</span>
+<span>Wi-Fiと有線ネットワーク接続をサポート</span>
 </li>
 </ul>
 </div>
@@ -261,21 +246,17 @@
 <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
 <i class="ri-device-line ri-xl text-primary"></i>
 </div>
-<h3 class="text-xl font-semibold">Other Requirements</h3>
+<h3 class="text-xl font-semibold">その他の要件</h3>
 </div>
 <ul class="text-gray-600 space-y-3">
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>UEFI firmware support (recommended)</span>
+<span>UEFIファームウェアサポート（推奨）</span>
 </li>
 <li class="flex items-start">
 <span class="text-primary mr-2">•</span>
-<span>TPM 2.0 security chip (optional)</span>
+<span>TPM 2.0セキュリティチップ（オプション）</span>
 </li>
-<!-- <li class="flex items-start">
-<span class="text-primary mr-2">•</span>
-<span>USB 3.0 interface (for installation)</span>
-</li> -->
 </ul>
 </div>
 </div>
@@ -285,20 +266,20 @@
 Lingmo OS 3.0
 </h3>
 <p class="text-gray-700 mb-4">
-Choose the version that suits your needs and start experiencing the modern Linux system.
+ニーズに合ったバージョンを選択して、モダンなLinuxシステムを体験してください。
 </p>
 <a href="#" class="inline-block text-white bg-primary px-6 py-3 rounded-button font-semibold shadow-md hover:shadow-lg transition-all whitespace-nowrap">
-<i class="ri-download-line mr-2"></i>Download Lingmo OS
+<i class="ri-download-line mr-2"></i>Lingmo OSをダウンロード
 </a>
 </div>
 </div>
 </section>
-<!-- Installation Guide -->
+<!-- インストールガイド -->
 <section id="guide" class="py-20 bg-gray-50">
 <div class="container mx-auto px-4">
 <div class="text-center mb-16">
-<h2 class="text-4xl font-bold mb-4">Installation Guide</h2>
-<p class="text-lg text-gray-600 max-w-3xl mx-auto">Follow these steps to easily install Lingmo OS on your device</p>
+<h2 class="text-4xl font-bold mb-4">インストールガイド</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Lingmo OSをデバイスに簡単にインストールするには、以下の手順に従ってください</p>
 </div>
 <div class="max-w-4xl mx-auto">
 <div class="bg-white p-8 rounded-lg shadow-md">
@@ -307,42 +288,42 @@ Choose the version that suits your needs and start experiencing the modern Linux
 <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-4">
 <span class="text-2xl font-bold text-primary">1</span>
 </div>
-<h3 class="text-lg font-semibold mb-2">Prepare Installation Media</h3>
-<p class="text-gray-600 text-sm">Download the system image and create a bootable USB drive</p>
+<h3 class="text-lg font-semibold mb-2">インストールメディアの準備</h3>
+<p class="text-gray-600 text-sm">システムイメージをダウンロードし、起動可能なUSBドライブを作成します</p>
 </div>
 <div class="flex flex-col items-center text-center">
 <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-4">
 <span class="text-2xl font-bold text-primary">2</span>
 </div>
-<h3 class="text-lg font-semibold mb-2">Set Boot Order</h3>
-<p class="text-gray-600 text-sm">Enter BIOS to set boot from USB drive</p>
+<h3 class="text-lg font-semibold mb-2">ブート順序の設定</h3>
+<p class="text-gray-600 text-sm">BIOSに入り、USBドライブからのブートを設定します</p>
 </div>
 <div class="flex flex-col items-center text-center">
 <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-4">
 <span class="text-2xl font-bold text-primary">3</span>
 </div>
-<h3 class="text-lg font-semibold mb-2">Complete Installation</h3>
-<p class="text-gray-600 text-sm">Follow the installation wizard to complete the system installation</p>
+<h3 class="text-lg font-semibold mb-2">インストールの完了</h3>
+<p class="text-gray-600 text-sm">インストールウィザードに従ってシステムインストールを完了します</p>
 </div>
 </div>
 <div class="space-y-8">
 <div>
 <h3 class="text-xl font-semibold mb-4 flex items-center">
 <div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full mr-3 text-white font-bold">1</div>
-Prepare Installation Media
+インストールメディアの準備
 </h3>
 <div class="pl-11">
 <ol class="list-decimal pl-5 text-gray-700 space-y-3">
-<li>Download the Lingmo OS system image file (.iso)</li>
-<li>Prepare a USB drive with at least 8GB capacity (note: data on the USB drive will be erased)</li>
-<li>Download and install <a href="https://etcher.balena.io/" class="text-primary hover:underline">balenaEtcher</a></li>
-<li>Run the tool, select the downloaded image file and the USB drive</li>
-<li>Click "Start" and wait for the process to complete</li>
+<li>Lingmo OSシステムイメージファイル（.iso）をダウンロードします</li>
+<li>8GB以上の容量があるUSBドライブを用意してください（注意：USBドライブのデータは消去されます）</li>
+<li><a href="https://etcher.balena.io/" class="text-primary hover:underline">balenaEtcher</a>をダウンロードしてインストールします</li>
+<li>ツールを実行し、ダウンロードしたイメージファイルとUSBドライブを選択します</li>
+<li>「開始」をクリックし、処理が完了するのを待ちます</li>
 </ol>
 <div class="mt-4 bg-gray-50 p-4 rounded-lg">
 <p class="text-sm text-gray-600">
 <i class="ri-lightbulb-line text-yellow-500 mr-1"></i>
-Tip: Do not remove the USB drive during the process. Safely eject it after completion.
+ヒント：処理中にUSBドライブを抜かないでください。処理が完了したら安全に取り外してください。
 </p>
 </div>
 </div>
@@ -350,20 +331,20 @@ Tip: Do not remove the USB drive during the process. Safely eject it after compl
 <div>
 <h3 class="text-xl font-semibold mb-4 flex items-center">
 <div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full mr-3 text-white font-bold">2</div>
-Set Boot Order
+ブート順序の設定
 </h3>
 <div class="pl-11">
 <ol class="list-decimal pl-5 text-gray-700 space-y-3">
-<li>Insert the prepared bootable USB drive</li>
-<li>Restart your computer and press a specific key during startup to enter BIOS settings (common keys: F2, F10, F12, DEL)</li>
-<li>In the BIOS, find the "Boot Order" or "Boot Sequence" option</li>
-<li>Set the USB drive as the first boot device</li>
-<li>Save the settings and exit the BIOS</li>
+<li>準備した起動可能なUSBドライブを挿入します</li>
+<li>コンピュータを再起動し、起動時に特定のキーを押してBIOS設定に入ります（一般的なキー：F2、F10、F12、DEL）</li>
+<li>BIOSで、「ブート順序」または「ブートシーケンス」オプションを見つけます</li>
+<li>USBドライブを最初のブートデバイスに設定します</li>
+<li>設定を保存し、BIOSを退出します</li>
 </ol>
 <div class="mt-4 bg-gray-50 p-4 rounded-lg">
 <p class="text-sm text-gray-600">
 <i class="ri-information-line text-primary mr-1"></i>
-The key to enter BIOS may vary depending on the brand of your computer. Please refer to your computer's manual.
+BIOSに入るキーは、コンピュータのブランドによって異なる場合があります。コンピュータのマニュアルを参照してください。
 </p>
 </div>
 </div>
@@ -371,77 +352,76 @@ The key to enter BIOS may vary depending on the brand of your computer. Please r
 <div>
 <h3 class="text-xl font-semibold mb-4 flex items-center">
 <div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full mr-3 text-white font-bold">3</div>
-Complete Installation
+インストールの完了
 </h3>
 <div class="pl-11">
 <ol class="list-decimal pl-5 text-gray-700 space-y-3">
-<li>The computer will boot from the USB drive and enter the Lingmo OS installation program</li>
-<li>Select language and region settings</li>
-<li>Set up a username and password</li>
-<li>Choose the installation location (disk partitioning)</li>
-<li>Wait for the installation to complete</li>
-<li>During the first boot, follow the prompts to complete the initial setup</li>
+<li>コンピュータはUSBドライブから起動し、Lingmo OSインストールプログラムに入ります</li>
+<li>言語と地域設定を選択します</li>
+<li>ユーザー名とパスワードを設定します</li>
+<li>インストール場所（ディスクパーティション）を選択します</li>
+<li>インストールが完了するのを待ちます</li>
+<li>最初の起動では、プロンプトに従って初期設定を完了します</li>
 </ol>
 <div class="mt-4 bg-gray-50 p-4 rounded-lg">
 <p class="text-sm text-gray-600">
 <i class="ri-error-warning-line text-yellow-500 mr-1"></i>
-Warning: A fresh installation will erase all data on the selected partition. Please back up important files in advance.
+警告：新しいインストールでは、選択したパーティションのすべてのデータが消去されます。重要なファイルを事前にバックアップしてください。
 </p>
 </div>
 </div>
 </div>
 </div>
 <div class="mt-8 pt-6 border-t border-gray-200">
-<h3 class="text-xl font-semibold mb-4">Frequently Asked Questions</h3>
+<h3 class="text-xl font-semibold mb-4">よくある質問</h3>
 <div class="space-y-4">
 <div class="border border-gray-200 rounded-lg">
 <button class="faq-toggle w-full text-left px-4 py-3 flex justify-between items-center focus:outline-none">
-<span class="font-medium">What is Lingmo OS based on?</span>
+<span class="font-medium">Lingmo OSはどのようなシステムに基づいていますか？</span>
 <i class="ri-arrow-down-s-line ri-lg transition-transform"></i>
 </button>
 <div class="faq-content hidden px-4 pb-4 text-gray-600">
-<p>Lingmo OS is based on Debian GNU/Linux Stable.</p>
+<p>Lingmo OSはDebian GNU/Linux Stableに基づいています。</p>
 </div>
 </div>
 <div class="border border-gray-200 rounded-lg">
 <button class="faq-toggle w-full text-left px-4 py-3 flex justify-between items-center focus:outline-none">
-<span class="font-medium">What should I do if I encounter an error during the sources-media stage of installation?</span>
+<span class="font-medium">インストールのソースメディア段階でエラーが発生した場合はどうすればいいですか？</span>
 <i class="ri-arrow-down-s-line ri-lg transition-transform"></i>
 </button>
 <div class="faq-content hidden px-4 pb-4 text-gray-600">
-<p>This is usually caused by network issues. You can:</p>
+<p>これは通常、ネットワークの問題が原因です。以下のことができます：</p>
 <ol class="list-decimal pl-5 mt-2 space-y-1">
-<li>Disconnect from the network during installation</li>
-<li>The system is already installed at this stage, and you can restart the system directly.</li>
+<li>インストール中にネットワークから切断します</li>
+<li>この段階でシステムはすでにインストールされているため、直接システムを再起動することができます。</li>
 </ol>
 </div>
 </div>
 </div>
 </div>
 <div class="mt-8 text-center">
-<a href="https://wiki.lingmo.org/en/wiki/installation-guide" class="text-primary hover:text-secondary font-medium">
-View the complete installation guide <i class="ri-external-link-line"></i>
+<a href="https://wiki.lingmo.org/ja/wiki/installation-guide" class="text-primary hover:text-secondary font-medium">
+完全なインストールガイドを見る <i class="ri-external-link-line"></i>
 </a>
 </div>
 </div>
 </div>
 </section>
-<!-- Donation Support -->
+<!-- 寄付サポート -->
 <section id="donate" class="py-20 bg-white">
 <div class="container mx-auto px-4">
 <div class="text-center mb-16">
-<h2 class="text-4xl font-bold mb-4">Donation Support</h2>
-<p class="text-lg text-gray-600 max-w-3xl mx-auto">Your support is the driving force behind our continuous improvement of Lingmo OS.</p>
+<h2 class="text-4xl font-bold mb-4">寄付サポート</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">あなたのサポートが私たちがLingmo OSを継続的に改善する原動力です。</p>
 </div>
 <div class="max-w-3xl mx-auto">
 <div class="bg-white p-8 rounded-lg shadow-md">
 <div class="text-center mb-8">
 <p class="text-gray-700 mb-6">
-Lingmo OS is an open-source project. We are committed to providing the best operating system experience for users. Your donations will be used to support the development team, server maintenance, and the development of new features.
-</p>
+Lingmo OSはオープンソースプロジェクトです。私たちはユーザーに最高のオペレーティングシステム体験を提供することにコミットしています。あなたの寄付は、開発チームの支援、サーバーメンテナンス、新しい機能の開発に使われます。</p>
 <div class="inline-flex bg-gray-200 p-1 rounded-full">
 <button class="payment-tab px-6 py-2 rounded-full whitespace-nowrap focus:outline-none active bg-white text-primary shadow-sm" data-target="wechat">
-    <i class="ri-wechat-pay-fill mr-1 text-green-500"></i>WeChat Pay
+    <i class="ri-wechat-pay-fill mr-1 text-green-500"></i>微信支付
 </button>
 </div>
 </div>
@@ -456,7 +436,7 @@ Lingmo OS is an open-source project. We are committed to providing the best oper
     </div>
     <p class="text-gray-600 text-sm">
       <i class="ri-information-line text-green-500"></i>
-      Scan the QR code to complete the payment.
+      QRコードをスキャンして支払いを完了してください。
     </p>
   </div>
 </div>
@@ -465,17 +445,16 @@ Lingmo OS is an open-source project. We are committed to providing the best oper
 </div>
 </div>
 </section>
-<!-- Footer -->
+<!-- フッター -->
 <footer class="bg-gray-800 text-white py-12">
 <div class="container mx-auto px-4">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 <div>
 <!-- <h3 class="text-xl font-['Pacifico'] mb-4">Lingmo OS</h3> -->
 <a href="#" class="flex items-center">
-<!-- <span class="text-3xl font-['Pacifico'] text-primary">Lingmo OS</span> -->
- <img src="images/logo.svg" alt="Lingmo OS" style="width: 190px; height: 50px;">
+<img src="images/logo.svg" alt="Lingmo OS" style="width: 190px; height: 50px;">
 </a>
-<p class="text-gray-400 mb-4">Based on Debian GNU/Linux, a modern operating system.</p>
+<p class="text-gray-400 mb-4">Debian GNU/Linuxに基づくモダンなオペレーティングシステム。</p>
 <div class="flex space-x-4">
 <a href="https://github.com/LingmoOS" class="text-gray-400 hover:text-white transition-colors">
 <i class="ri-github-fill ri-lg"></i>
@@ -495,28 +474,28 @@ Lingmo OS is an open-source project. We are committed to providing the best oper
 </div>
 </div>
 <div>
-<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<h4 class="text-lg font-semibold mb-4">クイックリンク</h4>
 <ul class="space-y-2">
-<li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-<li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
-<li><a href="download/" class="text-gray-400 hover:text-white transition-colors">Download</a></li>
-<li><a href="#requirements" class="text-gray-400 hover:text-white transition-colors">System Requirements</a></li>
-<li><a href="#guide" class="text-gray-400 hover:text-white transition-colors">Installation Guide</a></li>
-<li><a href="donate/" class="text-gray-400 hover:text-white transition-colors">Donate</a></li>
-<li><a href="about/" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+<li><a href="#home" class="text-gray-400 hover:text-white transition-colors">ホーム</a></li>
+<li><a href="#features" class="text-gray-400 hover:text-white transition-colors">機能</a></li>
+<li><a href="download/" class="text-gray-400 hover:text-white transition-colors">ダウンロード</a></li>
+<li><a href="#requirements" class="text-gray-400 hover:text-white transition-colors">システム要件</a></li>
+<li><a href="#guide" class="text-gray-400 hover:text-white transition-colors">インストールガイド</a></li>
+<li><a href="donate/" class="text-gray-400 hover:text-white transition-colors">寄付</a></li>
+<li><a href="about/" class="text-gray-400 hover:text-white transition-colors">关于我们</a></li>
 </ul>
 </div>
 <div>
-<h4 class="text-lg font-semibold mb-4">Resources</h4>
+<h4 class="text-lg font-semibold mb-4">リソース</h4>
 <ul class="space-y-2">
-<li><a href="https://wiki.lingmo.org/" class="text-gray-400 hover:text-white transition-colors">Wiki/Document</a></li>
-<li><a href="https://github.com/LingmoOS" class="text-gray-400 hover:text-white transition-colors">Source code</a></li>
+<li><a href="https://wiki.lingmo.org/" class="text-gray-400 hover:text-white transition-colors">Wiki/ドキュメント</a></li>
+<li><a href="https://github.com/LingmoOS" class="text-gray-400 hover:text-white transition-colors">ソースコード</a></li>
 <li><a href="https://wiki.lingmo.org/en/wiki/faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
 <li><a href="https://space.bilibili.com/595380133" class="text-gray-400 hover:text-white transition-colors">Bilibili</a></li>
 </ul>
 </div>
 <div>
-<h4 class="text-lg font-semibold mb-4">Related Links</h4>
+<h4 class="text-lg font-semibold mb-4">関連リンク</h4>
 <ul class="space-y-2">
 <li><a href="https://debian.org/" class="text-gray-400 hover:text-white transition-colors">Debian GNU/Linux</a></li>
 <li><a href="https://kernel.org" class="text-gray-400 hover:text-white transition-colors">Linux Kernel</a></li>
@@ -528,9 +507,9 @@ Lingmo OS is an open-source project. We are committed to providing the best oper
 &copy; 2023-2025 Lingmo OS All Rights Reserved<br>
 <a href="https://beian.miit.gov.cn/" target="*blank" rel="noreferrer" style="color:#949494;text-decoration:none">Gansu ICP Record No. 2024012028</div>
 <div class="flex space-x-6">
-<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
-<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
-<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">License Agreement</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">プライバシーポリシー</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">利用規約</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">ライセンス契約</a>
 </div>
 </div>
 </div>
@@ -542,7 +521,7 @@ const mobileMenu = document.getElementById('mobile-menu');
 mobileMenuButton.addEventListener('click', function() {
 mobileMenu.classList.toggle('hidden');
 });
-// Close menu after clicking on a menu item
+// メニュー項目をクリックした後、メニューを閉じる
 const mobileMenuItems = mobileMenu.querySelectorAll('a');
 mobileMenuItems.forEach(item => {
 item.addEventListener('click', function() {
@@ -556,14 +535,14 @@ document.addEventListener('DOMContentLoaded', function() {
 const versionTabs = document.querySelectorAll('.version-tab');
 versionTabs.forEach(tab => {
 tab.addEventListener('click', function() {
-// Remove active state from all tabs
+// すべてのタブからアクティブな状態を削除
 versionTabs.forEach(t => t.classList.remove('active', 'bg-white', 'text-primary', 'shadow-sm'));
-// Add active state to the clicked tab
+// クリックされたタブにアクティブな状態を追加
 this.classList.add('active', 'bg-white', 'text-primary', 'shadow-sm');
-// Hide all content
+// すべてのコンテンツを隠す
 const tabContents = document.querySelectorAll('.tab-content');
 tabContents.forEach(content => content.classList.remove('active'));
-// Show content corresponding to the clicked tab
+// クリックされたタブに対応するコンテンツを表示
 const targetId = this.getAttribute('data-target') + '-content';
 document.getElementById(targetId).classList.add('active');
 });
@@ -575,14 +554,14 @@ document.addEventListener('DOMContentLoaded', function() {
 const paymentTabs = document.querySelectorAll('.payment-tab');
 paymentTabs.forEach(tab => {
 tab.addEventListener('click', function() {
-// Remove active state from all tabs
+// すべてのタブからアクティブな状態を削除
 paymentTabs.forEach(t => t.classList.remove('active', 'bg-white', 'text-primary', 'shadow-sm'));
-// Add active state to the clicked tab
+// クリックされたタブにアクティブな状態を追加
 this.classList.add('active', 'bg-white', 'text-primary', 'shadow-sm');
-// Hide all payment options
+// すべての支払いオプションを隠す
 const paymentOptions = document.querySelectorAll('.payment-option');
 paymentOptions.forEach(option => option.classList.remove('active'));
-// Show payment option corresponding to the clicked tab
+// クリックされたタブに対応する支払いオプションを表示
 const targetId = this.getAttribute('data-target') + '-option';
 document.getElementById(targetId).classList.add('active');
 });
@@ -593,24 +572,9 @@ document.getElementById(targetId).classList.add('active');
 document.addEventListener('DOMContentLoaded', function() {
 const faqToggles = document.querySelectorAll('.faq-toggle');
 faqToggles.forEach(toggle => {
-toggle.addEventListener('click', function() {
-const content = this.nextElementSibling;
-const icon = this.querySelector('i');
-// Toggle content display
-content.classList.toggle('hidden');
-// Rotate the icon
-if (content.classList.contains('hidden')) {
-icon.style.transform = 'rotate(0deg)';
-} else {
-icon.style.transform = 'rotate(180deg)';
-}
-});
-});
-});
-</script>
-<script id="smooth-scroll-script">
+toggle.addEventListener('click', function() { const content = this.nextElementSibling; const icon = this.querySelector('i'); // コンテンツの表示を切り替える content.classList.toggle('hidden'); // アイコンを回転する if (content.classList.contains('hidden')) { icon.style.transform = 'rotate(0deg)'; } else { icon.style.transform = 'rotate(180deg)'; } }); }); <script id="smooth-scroll-script">
 document.addEventListener('DOMContentLoaded', function() {
-// Smooth scrolling
+// スムーズスクロール
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 anchor.addEventListener('click', function(e) {
 e.preventDefault();
@@ -619,13 +583,13 @@ if (targetId === '#') return;
 const targetElement = document.querySelector(targetId);
 if (targetElement) {
 window.scrollTo({
-top: targetElement.offsetTop - 80, // Adjust for fixed navigation bar height
+top: targetElement.offsetTop - 80, // 固定ナビゲーションバーの高さを調整
 behavior: 'smooth'
 });
 }
 });
 });
-// Highlight navigation links on scroll
+// スクロール時にナビゲーションリンクをハイライト
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 window.addEventListener('scroll', function() {
@@ -645,7 +609,5 @@ link.classList.add('active');
 });
 });
 });
-</script>
-</body>
+</script></body>
 </html>
-

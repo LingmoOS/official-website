@@ -16,18 +16,14 @@
   const browserLang = navigator.language || navigator.userLanguage;
   let lang = 'zh'; // 默认语言
   if (browserLang.startsWith('en')) {
-    lang = 'en';
+    lang = '';
   } else if (browserLang.startsWith('ja')) {
     lang = 'ja';
-  } else if (browserLang.startsWith('ko')) {
-    lang = 'ko';
-  } else if (browserLang.startsWith('ru')) {
-    lang = 'ru';
   }
 
   // 根据语言跳转到对应的语言版本页面
   if (lang !== 'zh') {
-    window.location.href = `${lang}/`;
+    window.location.href = `../${lang}`;
   }
 </script>
 <link rel="stylesheet" href="../styles.css">

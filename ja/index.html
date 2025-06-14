@@ -413,34 +413,59 @@ BIOSに入るキーは、コンピュータのブランドによって異なる�
 <section id="donate" class="py-20 bg-white">
 <div class="container mx-auto px-4">
 <div class="text-center mb-16">
-<h2 class="text-4xl font-bold mb-4">寄付サポート</h2>
-<p class="text-lg text-gray-600 max-w-3xl mx-auto">あなたのサポートが私たちがLingmo OSを継続的に改善する原動力です。</p>
+<h2 class="text-4xl font-bold mb-4">寄付する</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">あなたのサポートは、Lingmo OSを継続的に改善するための私たちのモチベーションです</p>
 </div>
 <div class="max-w-3xl mx-auto">
 <div class="bg-white p-8 rounded-lg shadow-md">
 <div class="text-center mb-8">
 <p class="text-gray-700 mb-6">
-Lingmo OSはオープンソースプロジェクトです。私たちはユーザーに最高のオペレーティングシステム体験を提供することにコミットしています。あなたの寄付は、開発チームの支援、サーバーメンテナンス、新しい機能の開発に使われます。</p>
+Lingmo OSはオープンソースプロジェクトであり、ユーザーに最高のオペレーティングシステム体験を提供することに尽力しています。皆様からのご寄付は、開発チーム、サーバーのメンテナンス、新機能の開発に役立てられます。
+</p>
 <div class="inline-flex bg-gray-200 p-1 rounded-full">
-<button class="payment-tab px-6 py-2 rounded-full whitespace-nowrap focus:outline-none active bg-white text-primary shadow-sm" data-target="wechat">
-    <i class="ri-wechat-pay-fill mr-1 text-green-500"></i>微信支付
+  <button class="payment-tab px-6 py-2 rounded-full whitespace-nowrap focus:outline-none active bg-white text-primary shadow-sm" data-target="wechat">
+    <i class="ri-wechat-pay-fill mr-1 text-green-500"></i>微信ペイ
+  </button>
+<button class="payment-tab active px-6 py-2 rounded-full whitespace-nowrap focus:outline-none" data-target="alipay">
+<i class="ri-alipay-fill mr-1 text-blue-500"></i>アリペイ
 </button>
+<!-- <button class="payment-tab px-6 py-2 rounded-full whitespace-nowrap focus:outline-none" data-target="wechat">
+<i class="ri-wechat-pay-fill mr-1 text-green-500"></i>微信支付
+</button> -->
 </div>
 </div>
 <div class="payment-options">
+<!-- 微信支付 -->
 <div id="wechat-option" class="payment-option active">
   <div class="flex flex-col items-center">
     <div class="bg-green-50 p-4 rounded-lg mb-4">
       <div class="w-48 h-48 bg-white p-2 rounded-lg shadow-sm">
-        <!-- WeChat Pay QR code image -->
-        <img src="images/wechat.png" alt="WeChat Pay QR Code" class="w-full h-full object-cover rounded">
+        <!-- 微信支付二维码图片 -->
+        <img src="images/wechat.png" alt="微信支付二维码" class="w-full h-full object-cover rounded">
       </div>
     </div>
     <p class="text-gray-600 text-sm">
       <i class="ri-information-line text-green-500"></i>
-      QRコードをスキャンして支払いを完了してください。
+      QRコードをスキャンして支払いを完了してください
     </p>
   </div>
+</div>
+<!-- 支付宝 -->
+<div id="alipay-option" class="payment-option">
+<div class="flex flex-col items-center">
+<div class="bg-blue-50 p-4 rounded-lg mb-4">
+<div class="w-48 h-48 bg-white p-2 rounded-lg shadow-sm">
+<img src="images/IMG_20250614_141121.jpg" alt="支付宝支付二维码" class="w-full h-full object-cover rounded">
+<!--<div class="w-full h-full flex items-center justify-center bg-blue-100 rounded">-->
+<!--<i class="ri-qr-code-line ri-4x text-blue-500"></i>-->
+</div>
+</div>
+</div>
+<p class="text-gray-600 text-sm">
+<i class="ri-information-line text-blue-500"></i>
+寄付するには、Alipayを使用して上記のQRコードをスキャンしてください。
+</p>
+</div>
 </div>
 </div>
 </div>

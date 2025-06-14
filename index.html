@@ -432,35 +432,59 @@ View the complete installation guide <i class="ri-external-link-line"></i>
 <section id="donate" class="py-20 bg-white">
 <div class="container mx-auto px-4">
 <div class="text-center mb-16">
-<h2 class="text-4xl font-bold mb-4">Donation Support</h2>
-<p class="text-lg text-gray-600 max-w-3xl mx-auto">Your support is the driving force behind our continuous improvement of Lingmo OS.</p>
+<h2 class="text-4xl font-bold mb-4">Donate</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Your support is our motivation to continuously improve Lingmo OS</p>
 </div>
 <div class="max-w-3xl mx-auto">
 <div class="bg-white p-8 rounded-lg shadow-md">
 <div class="text-center mb-8">
 <p class="text-gray-700 mb-6">
-Lingmo OS is an open-source project. We are committed to providing the best operating system experience for users. Your donations will be used to support the development team, server maintenance, and the development of new features.
+Lingmo OS is an open source project, and we are committed to providing users with the best operating system experience. Your donation will be used to support the development team, server maintenance, and new feature development.
 </p>
 <div class="inline-flex bg-gray-200 p-1 rounded-full">
-<button class="payment-tab px-6 py-2 rounded-full whitespace-nowrap focus:outline-none active bg-white text-primary shadow-sm" data-target="wechat">
+  <button class="payment-tab px-6 py-2 rounded-full whitespace-nowrap focus:outline-none active bg-white text-primary shadow-sm" data-target="wechat">
     <i class="ri-wechat-pay-fill mr-1 text-green-500"></i>WeChat Pay
+  </button>
+<button class="payment-tab active px-6 py-2 rounded-full whitespace-nowrap focus:outline-none" data-target="alipay">
+<i class="ri-alipay-fill mr-1 text-blue-500"></i>Alipay
 </button>
+<!-- <button class="payment-tab px-6 py-2 rounded-full whitespace-nowrap focus:outline-none" data-target="wechat">
+<i class="ri-wechat-pay-fill mr-1 text-green-500"></i>微信支付
+</button> -->
 </div>
 </div>
 <div class="payment-options">
+<!-- 微信支付 -->
 <div id="wechat-option" class="payment-option active">
   <div class="flex flex-col items-center">
     <div class="bg-green-50 p-4 rounded-lg mb-4">
       <div class="w-48 h-48 bg-white p-2 rounded-lg shadow-sm">
-        <!-- WeChat Pay QR code image -->
-        <img src="images/wechat.png" alt="WeChat Pay QR Code" class="w-full h-full object-cover rounded">
+        <!-- 微信支付二维码图片 -->
+        <img src="images/wechat.png" alt="微信支付二维码" class="w-full h-full object-cover rounded">
       </div>
     </div>
     <p class="text-gray-600 text-sm">
       <i class="ri-information-line text-green-500"></i>
-      Scan the QR code to complete the payment.
+      Scan the QR code to complete payment
     </p>
   </div>
+</div>
+<!-- 支付宝 -->
+<div id="alipay-option" class="payment-option">
+<div class="flex flex-col items-center">
+<div class="bg-blue-50 p-4 rounded-lg mb-4">
+<div class="w-48 h-48 bg-white p-2 rounded-lg shadow-sm">
+<img src="images/IMG_20250614_141121.jpg" alt="支付宝支付二维码" class="w-full h-full object-cover rounded">
+<!--<div class="w-full h-full flex items-center justify-center bg-blue-100 rounded">-->
+<!--<i class="ri-qr-code-line ri-4x text-blue-500"></i>-->
+</div>
+</div>
+</div>
+<p class="text-gray-600 text-sm">
+<i class="ri-information-line text-blue-500"></i>
+Please use Alipay to scan the QR code above to donate
+</p>
+</div>
 </div>
 </div>
 </div>
